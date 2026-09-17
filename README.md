@@ -53,12 +53,12 @@ X = vectorizer.fit_transform(questions)
 model = MultinomialNB()
 model.fit(X, labels)
 
-print("Chatbot is ready! Type 'quit' to stop.\n")
+print("Chatbot is ready! Type 'Quit' to stop.\n")
 
 while True:
     user_input = input("You: ")
 
-    if user_input.lower() == "quit":
+    if user_input.lower() == "Quit":
         break
 
     user_vec = vectorizer.transform([user_input])
